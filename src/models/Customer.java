@@ -7,6 +7,11 @@ public class Customer {
     private String name, email;
     ArrayList<Integer> listOfAccounts = new ArrayList<>();
 
+    public Customer() {
+    }
+
+    ;
+
     public Customer(int id, String name, String email) {
         this.id = id;
         this.name = name;

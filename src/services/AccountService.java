@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AccountService {
-    private Scanner scanner = new Scanner(System.in);
-    private ArrayList<Customer> customers = new ArrayList<>();
+    private final Scanner scanner = new Scanner(System.in);
+    private final ArrayList<Customer> customers = new ArrayList<>();
 
     public void addCustomer() {
         System.out.println("\n--- Add New Customer ---");
@@ -39,6 +39,20 @@ public class AccountService {
             System.out.println(c);
             System.out.println("----------------------");
         }
+    }
+
+    public void openNewAccount() {
+        viewAllCustomers();
+        System.out.println("select a customer with id");
+        int choice;
+        choice = scanner.nextInt();
+        Customer selectedCustomer = new Customer();
+        selectedCustomer = findCustomerById(choice);
+        int id = selectedCustomer.getId();
+        String email = selectedCustomer.getEmail();
+        String Name = selectedCustomer.getName();
+        System.out.println(id + " " + email + " " + Name);
+
     }
 
     public Customer findCustomerById(int id) {

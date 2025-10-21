@@ -1,6 +1,7 @@
 package main;
 
 import services.AccountService;
+
 import java.util.Scanner;
 
 public class Main {
@@ -32,7 +33,7 @@ public class Main {
                     accountService.viewAllCustomers();
                     break;
                 case 3:
-                    System.out.println("Open New Account feature coming soon...");
+                    accountService.openNewAccount();
                     break;
                 case 4:
                     System.out.println("Deposit Money feature coming soon...");
